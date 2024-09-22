@@ -62,6 +62,11 @@ namespace Employee
             {
                 Console.WriteLine($"Name: {emp.Name}, Age: {emp.Age}");
             }
+
+            //Task 6: Count how many employees earn more than 50,000 forints
+            int highEarnersCount = employees.Count(e => e.Pay > 50000);
+            Console.WriteLine($"\nNumber of employees earning more than 50,000 forints: {highEarnersCount}");
+
             Console.ReadKey();
         }
     }
