@@ -43,7 +43,17 @@ namespace Employee
             foreach (var emp in employees)
             {
                 Console.WriteLine(emp.Name);
-            }            
+            }
+
+            //Task 4: Display the ID and name of the employee(s) with the highest salary
+            int maxPay = employees.Max(e => e.Pay);
+            var topEarners = employees.Where(e => e.Pay == maxPay);
+
+            Console.WriteLine("\nEmployee(s) with the highest salary:");
+            foreach (var emp in topEarners)
+            {
+                Console.WriteLine($"ID: {emp.Id}, Name: {emp.Name}, Pay:{emp.Pay} Ft.");
+            }
 
             Console.ReadKey();
         }
