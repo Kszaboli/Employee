@@ -55,6 +55,13 @@ namespace Employee
                 Console.WriteLine($"ID: {emp.Id}, Name: {emp.Name}, Pay:{emp.Pay} Ft.");
             }
 
+            //Task 5: Display the names and ages of employees who have 10 years left to retirement
+            Console.WriteLine("\nEmployees with 10 years until retirement (retirement age is 65):");
+            var nearingRetirement = employees.Where(e => e.Age == 55);
+            foreach (var emp in nearingRetirement)
+            {
+                Console.WriteLine($"Name: {emp.Name}, Age: {emp.Age}");
+            }
             Console.ReadKey();
         }
     }
